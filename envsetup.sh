@@ -579,11 +579,6 @@ function lunch()
     $T/prebuilts/build-tools/linux-x86/bin/py3-cmd $T/vendor/lumine/build/tools/barista.py $product
     source_vendorsetup &>/dev/null
 
-    # Generate build-manifest.xml after roomservice finishes
-    cd $T > /dev/null
-    vendor/lineage/build/tools/gen_build-manifest.sh
-    cd - > /dev/null
-
     # Validate the selection and set all the environment stuff
     _lunch_meat $product $release $variant
 
